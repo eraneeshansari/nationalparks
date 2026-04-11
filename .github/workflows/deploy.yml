@@ -1,26 +1,25 @@
 name: Trigger OpenShift Build
 
 on:
-push:
-branches:
-- master
+  push:
+    branches:
+      - master
 
 jobs:
-trigger-build:
-runs-on: ubuntu-latest
+  trigger-build:
+    runs-on: ubuntu-latest
 
-steps:
-  - name: Trigger OpenShift Build via API
-    run: |
-      curl -k -X POST \
-        -H "Authorization: Bearer ${{ secrets.OPENSHIFT_TOKEN }}" \
-        -H "Content-Type: application/json" \
-        -d '{
-          "kind": "BuildRequest",
-          "apiVersion": "build.openshift.io/v1",
-          "metadata": {
-            "generateName": "nationalparks-"
-          }
-        }' \
-        https://api.rm2.thpm.p1.openshiftapps.com:6443/apis/build.openshift.io/v1/namespaces/er-aneeshansari-dev/buildconfigs/nationalparks/instantiate
-
+    steps:
+      - name: Trigger OpenShift Build via API
+        run: |
+          curl -k -X POST \
+            -H "Authorization: Bearer ${{ secrets.OPENSHIFT_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "kind": "BuildRequest",
+              "apiVersion": "build.openshift.io/v1",
+              "metadata": {
+                "generateName": "nationalparks-"
+              }
+            }' \
+            https://api.rm2.thpm.p1.openshiftapps.com:6443/apis/build.openshift.io/v1/namespaces/er-aneeshansari-dev/buildconfigs/nationalparks/instantiate
