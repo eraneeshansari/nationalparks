@@ -10,18 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Trigger OpenShift Build via API
+      - name: Trigger OpenShift Build
         run: |
-          BUILD_NAME=nationalparks-$(date +%s)
-
           curl -k -X POST \
             -H "Authorization: Bearer ${{ secrets.OPENSHIFT_TOKEN }}" \
             -H "Content-Type: application/json" \
-            -d "{
-              \"kind\": \"BuildRequest\",
-              \"apiVersion\": \"build.openshift.io/v1\",
-              \"metadata\": {
-                \"name\": \"${BUILD_NAME}\"
-              }
-            }" \
+            -d '{"kind":"BuildRequest","apiVersion":"build.openshift.io/v1"}' \
             https://api.rm2.thpm.p1.openshiftapps.com:6443/apis/build.openshift.io/v1/namespaces/er-aneeshansari-dev/buildconfigs/nationalparks/instantiate
