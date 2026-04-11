@@ -1,0 +1,11 @@
+/root/nationalparks/src/main/java/com/openshift/evg/roadshow/parks/model/Park.java
+/root/nationalparks/src/main/java/com/openshift/evg/roadshow/rest/gateway/model/Coordinates.java
+/root/nationalparks/src/main/java/com/openshift/evg/roadshow/parks/rest/Parks.java
+/root/nationalparks/src/main/java/com/openshift/evg/roadshow/parks/rest/BackendController.java
+/root/nationalparks/src/main/java/com/openshift/evg/roadshow/parks/db/MongoDBConnection.java
+/root/nationalparks/src/main/java/com/openshift/evg/roadshow/parks/NationalParksApplication.java
+/root/nationalparks/src/main/java/com/openshift/evg/roadshow/parks/rest/Healthz.java
+/root/nationalparks/src/main/java/com/openshift/evg/roadshow/parks/model/Coordinates.java
+/root/nationalparks/src/main/java/com/openshift/evg/roadshow/parks/db/ParkReadConverter.java
+/root/nationalparks/src/main/java/com/openshift/evg/roadshow/parks/db/ParksAppConfig.java
+/root/nationalparks/src/main/java/com/openshift/evg/roadshow/rest/gateway/model/Backend.java
