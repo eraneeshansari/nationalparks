@@ -9,7 +9,6 @@ jobs:
 trigger-build:
 runs-on: ubuntu-latest
 
-```
 steps:
   - name: Trigger OpenShift Build via API
     run: |
