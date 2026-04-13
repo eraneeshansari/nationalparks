@@ -1,6 +1,6 @@
 = NationalParks backend application
 This application is a backend that provides geolocation information about NationalParks. The information is stored in a mongodb
-...
+.....
 
 == Installation
 As the application needs to interact with openshift's API, you'll need to provide some permissions to the default ServiceAccount for that.
